@@ -98,6 +98,8 @@
   &:last-child {
     content: '';
     padding: $spacer * 2;
+    padding-left: $spacer;
+    text-align: center;
   }
 }
 .add-todo-btn {
@@ -144,9 +146,8 @@
 .todo-viewport {
   min-height: 400px;
   height: calc(100vh - 300px);
-  // border: 1px solid black;
 }
 
-// .example-item {
-//   height: 50px;
-// }
+.todo-loading {
+  // float: left;
+}

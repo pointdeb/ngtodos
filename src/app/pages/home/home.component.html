@@ -45,7 +45,9 @@
               <mat-checkbox></mat-checkbox>
             </div>
           </div>
-          <div class="todo-item"></div>
+          <div class="todo-item">
+            <mat-spinner [diameter]="20" *ngIf="loading" class="todo-loading" mode="indeterminate"></mat-spinner>
+          </div>
         </cdk-virtual-scroll-viewport>
       </div>
     </ng-template>
@@ -57,9 +59,12 @@
 <button [routerLink]="['/todo-add']" routerLinkActive="active" class="add-todo-btn" mat-icon-button mat-raised-button>
   <mat-icon>add</mat-icon>
 </button>
-<button class="more-todo-btn" mat-icon-button mat-raised-button *ngIf="loading">
+<!-- <button class="more-todo-btn" mat-icon-button mat-raised-button *ngIf="loading">
   <mat-icon>more_horiz</mat-icon>
-</button>
+</button> -->
+<!-- <button class="more-todo-btn" mat-icon-button mat-raised-button>
+  <mat-icon>more_horiz</mat-icon>
+</button> -->
 
 <!-- <ng-template matTabContent #loading>
     <div class="todos-loading">

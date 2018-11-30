@@ -12,6 +12,7 @@ import {
   MatSelectModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  MatProgressSpinnerModule,
  } from '@angular/material';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 // import { ScrollingModule as ExperimentalScrollingModule } from '@angular/cdk-experimental/scrolling';
@@ -28,7 +29,8 @@ const modules = [
   MatInputModule,
   MatSelectModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

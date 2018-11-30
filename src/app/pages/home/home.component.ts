@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
   ];
 
   constructor() {
-    this.movies = Array(10).fill(0).map((_, i) => `Episode # ${i} - The Force Awakens`);
+    this.movies = Array(12).fill(0).map((_, i) => `Episode # ${i} - The Force Awakens`);
   }
 
   ngOnInit() {
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
 
   scrolled(data: number) {
 
-    console.log('here', data, data % 10);
+    console.log('here', data, data % 8);
     if ((data % 10) === 0) {
       this.loading = true;
       setTimeout(() => {
