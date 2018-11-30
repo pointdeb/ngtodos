@@ -9,6 +9,7 @@ import {
   MatTabsModule,
   MatCheckboxModule,
  } from '@angular/material';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 const modules = [
   MatButtonModule,
@@ -17,7 +18,8 @@ const modules = [
   MatCardModule,
   MatFormFieldModule,
   MatTabsModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  ScrollDispatchModule
 ];
 
 @NgModule({
