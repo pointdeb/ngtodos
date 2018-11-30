@@ -13,4 +13,23 @@
   .navbar-header {
     flex-grow: 1;
   }
+
+  &.not-home {
+    background: $primary;
+    position: relative;
+
+    .navbar-header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .navbar-title {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
 }
+

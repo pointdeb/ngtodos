@@ -1,20 +1,29 @@
-$primary: #46529C;
+@import '~@angular/material/theming';
+
+$primary: map-get($mat-teal, 500);
 $spacer: 16px;
 $secondary-opacity: .56;
 
 
 @function color($color) {
-  @if (lightness($color) > 45) {
+  @if (lightness($color) > 50) {
     @return #000000;
   } @else {
     @return #ffffff;
   }
 }
 @function colorinverse($color) {
-  @if (lightness($color) > 45) {
+  @if (lightness($color) > 50) {
     @return #ffffff;
   } @else {
     @return #000000;
   }
+}
+
+@mixin md-icon-size($size: 24px) {
+  font-size: $size;
+  height: $size;
+  width: $size;
+  line-height: $size;
 }
 

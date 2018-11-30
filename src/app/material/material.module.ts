@@ -8,6 +8,10 @@ import {
   MatCardModule,
   MatTabsModule,
   MatCheckboxModule,
+  MatInputModule,
+  MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
  } from '@angular/material';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 // import { ScrollingModule as ExperimentalScrollingModule } from '@angular/cdk-experimental/scrolling';
@@ -20,7 +24,11 @@ const modules = [
   MatFormFieldModule,
   MatTabsModule,
   MatCheckboxModule,
-  ScrollingModule
+  ScrollingModule,
+  MatInputModule,
+  MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 ];
 
 @NgModule({

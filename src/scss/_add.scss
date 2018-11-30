@@ -1,0 +1,44 @@
+@import './include';
+
+
+.todo-add-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  // background: $primary;
+  background-image: url('./assets/img/cover.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  // color: color($primary);
+
+  .add-header {
+    min-height: 150px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    mat-icon {
+      @include md-icon-size(50px);
+      color: color($primary);
+    }
+  }
+
+  .add-form {
+    flex-grow: 1;
+    margin: $spacer;
+  }
+
+  .add-form form {
+    // background: rgba($color: $primary, $alpha: 0.8);
+    border-radius: 4px;
+    color: color($primary);
+    // padding: $spacer;
+    mat-form-field {
+      width: 100%;
+      margin-bottom: 14px;
+    }
+  }
+}
