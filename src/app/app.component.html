@@ -33,7 +33,7 @@
           <span class="todo-hint">Do it now!</span>
           <span class="todo-total">{{ movies.length }}</span>
         </div>
-        <cdk-virtual-scroll-viewport class="todo-viewport todo-list" cdkDropList itemSize="4" (cdkDropListDropped)="drop($event)">
+        <cdk-virtual-scroll-viewport class="todo-viewport todo-list" cdkDropList (cdkDropListDropped)="drop($event)" (scrolledIndexChange)="scrolled($event)" [itemSize]="56">
           <div class="todo-item" *cdkVirtualFor="let item of movies" cdkDrag>
             <div class="todo-placeholder" *cdkDragPlaceholder></div>
             <div class="todo-desc">
@@ -56,12 +56,12 @@
 <button class="add-todo-btn" mat-icon-button mat-raised-button>
   <mat-icon>add</mat-icon>
 </button>
-<button class="more-todo-btn" mat-icon-button mat-raised-button>
+<button class="more-todo-btn" mat-icon-button mat-raised-button *ngIf="loading">
   <mat-icon>more_horiz</mat-icon>
 </button>
 
-<ng-template matTabContent #loading>
+<!-- <ng-template matTabContent #loading>
   <div class="todos-loading">
     <h1>loading...</h1>
   </div>
-</ng-template>
+</ng-template> -->
