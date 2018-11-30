@@ -1,0 +1,22 @@
+<div class="todos">
+  <div class="todo-header">
+    <span class="todo-hint">Do it now!</span>
+    <span class="todo-total">{{ movies.length }}</span>
+  </div>
+  <cdk-virtual-scroll-viewport class="todo-viewport todo-list" cdkDropList (cdkDropListDropped)="drop($event)"
+    (scrolledIndexChange)="scrolled($event)" [itemSize]="56">
+    <div class="todo-item" *cdkVirtualFor="let item of movies" cdkDrag>
+      <div class="todo-placeholder" *cdkDragPlaceholder></div>
+      <div [routerLink]="['/todo', 1]" class="todo-desc">
+        <span>Check database connection</span>
+        <span class="todo-date">Today at 3 PM</span>
+      </div>
+      <div class="todo-state">
+        <mat-checkbox></mat-checkbox>
+      </div>
+    </div>
+    <div class="todo-item">
+      <mat-spinner [diameter]="20" *ngIf="loading" class="todo-loading" mode="indeterminate"></mat-spinner>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app.routing';
 import { SharedModule } from './shared/shared.module';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { TodoListComponent } from './cards/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     HomeComponent,
     TodoAddComponent,
     TodoDetailComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
