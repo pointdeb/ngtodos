@@ -64,7 +64,7 @@ export class TodoListComponent implements OnInit {
     if ((data % 10) === 0) {
       this.loading = true;
       setTimeout(() => {
-        // this.movies = [...this.movies, ...Array(10).fill(0).map((_, i) => `Episode # ${i} - The Force Awakens`)];
+        this.movies = [...this.movies, ...Array(12).fill(0).map((_, i) => `Episode # ${i} - The Force Awakens`)];
         this.loading = false;
       }, 1000);
     }
