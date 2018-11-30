@@ -1,0 +1,65 @@
+@import './include';
+.header {
+  background-image: url('./assets/img/cover.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: color($primary);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  min-height: 200px;
+
+  .quote-container {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0 $spacer;
+    padding-bottom: $spacer;
+    .quote-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+      max-width: 50%;
+    }
+    .quote-date {
+      color: rgba($color: color($primary), $alpha: $secondary-opacity);
+    }
+  }
+  .state-container {
+    flex-grow: 1;
+    background: rgba($color: #000000, $alpha: 0.2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0 $spacer;
+    padding-bottom: $spacer;
+    .states {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .state-count {
+        display: block;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: right;
+      }
+      .state-type {
+        color: rgba($color: color($primary), $alpha: $secondary-opacity);
+      }
+    }
+    .full-state {
+      text-align: right;
+    }
+  }
+}
+
+// .days-tab {
+
+// }

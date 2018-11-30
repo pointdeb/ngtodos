@@ -1,0 +1,16 @@
+@import './include';
+.navbar {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 50px;
+  color: color($primary);
+  padding: 0 $spacer;
+  z-index: 1000;
+  // background: url('./assets/img/cover.jpeg');
+  .navbar-header {
+    flex-grow: 1;
+  }
+}
