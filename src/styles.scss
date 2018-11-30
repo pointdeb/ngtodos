@@ -26,3 +26,11 @@ body {
   // line-height: 0.01rem;
   font-family: 'Montserrat', sans-serif !important;
 }
+
+.wrapper {
+  max-width: 500px;
+  @media screen and (min-width: 500px) {
+    position: relative;
+    margin: $spacer auto;
+  }
+}
