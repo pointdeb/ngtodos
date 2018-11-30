@@ -1,3 +1,51 @@
-<p>
-  todo-detail works!
-</p>
+<div class="todo-add-page">
+    <nav class="navbar not-home">
+      <div class="navbar-header">
+        <a class="navbar-toogler" [routerLink]="['/']" [routerLinkActive]="'active'" mat-icon-button>
+          <mat-icon>arrow_back</mat-icon>
+        </a>
+        <span class="navbar-title">Details todo</span>
+        <a class="navbar-option" mat-icon-button>
+          <mat-icon>settings</mat-icon>
+        </a>
+      </div>
+    </nav>
+    <div class="add-header">
+      <mat-icon>today</mat-icon>
+    </div>
+    <mat-card class="add-form">
+      <form [formGroup]="formGroup">
+        <mat-form-field>
+          <input matInput type="text" formControlName="title" placeholder="Title" color="accent">
+          <mat-error *ngIf="hasError('title')">{{getErrors('title')}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <textarea rows="5" matInput type="text" formControlName="descriptions" placeholder="Descriptions"></textarea>
+          <mat-error *ngIf="hasError('descriptions')">{{getErrors('descriptions')}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select type="text" formControlName="state" placeholder="State">
+            <mat-option *ngFor="let todoState of todoStates" [value]="todoState.value">
+              {{todoState.label}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="hasError('state')">{{getErrors('state')}}</mat-error>
+        </mat-form-field>
+        <div class="form-date">
+          <mat-form-field>
+            <input matInput [matDatepicker]="startDatePicker" placeholder="Start" formControlName="start_date">
+            <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #startDatePicker></mat-datepicker>
+            <mat-error *ngIf="hasError('start_date')">{{getErrors('start_date')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [matDatepicker]="endDatePicker" placeholder="End" formControlName="end_date">
+            <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #endDatePicker></mat-datepicker>
+            <mat-error *ngIf="hasError('end_date')">{{getErrors('end_date')}}</mat-error>
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary">Add your thing</button>
+      </form>
+    </mat-card>
+  </div>

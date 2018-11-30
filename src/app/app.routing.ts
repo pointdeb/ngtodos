@@ -8,7 +8,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'todo-add', component: TodoAddComponent },
-  { path: 'todo-detail', component: TodoDetailComponent },
+  { path: 'todo/:id', component: TodoDetailComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
